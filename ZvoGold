@@ -1,3 +1,4 @@
+-- Zvo Gold
 local Kavo = {}
 
 local tween = game:GetService("TweenService")
@@ -167,8 +168,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Sentinel
     elseif themeList == "Synapse" then
         themeList = themeStyles.Synapse
-    elseif themeList == "Serpent" then
-        themeList = themeStyles.Serpent
+    elseif themeList == "Gold" then
+        themeList = themeStyles.Gold
     else
         if themeList.SchemeColor == nil then
             themeList.SchemeColor = Color3.fromRGB(74, 99, 135)
