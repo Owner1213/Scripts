@@ -1,5 +1,16 @@
 -- AutoShoot
-
+--ignore
+local guns = {
+    {Name = "LaserGun", Connectivity = getgenv().LaserGunConnectivity},
+    {Name = "RayGun", Connectivity = getgenv().RayGunConnectivity},
+    {Name = "NailGun", Connectivity = getgenv().NailGunConnectivity},
+    {Name = "RocketLauncher", Connectivity = getgenv().RocketLauncherConnectivity},
+    {Name = "ParaGun", Connectivity = getgenv().ParaGunConnectivity},
+    {Name = "AK47Gun", Connectivity = getgenv().AK47GunConnectivity},
+    {Name = "SixShooterGun", Connectivity = getgenv().SixShooterGunConnectivity},
+    {Name = "SniperGun", Connectivity = getgenv().SniperGunConnectivity},
+    {Name = "ShotGun", Connectivity = getgenv().ShotGunConnectivity}
+}
 -- TOGGLES --
 getgenv().LaserGunConnectivity = true -- set these ones to false if you wanna ignore one of these guns
 getgenv().RayGunConnectivity = true
@@ -145,7 +156,7 @@ spawn(function()
                 end
 
                 -- Wait for a short interval before checking again
-                wait(1) -- Adjust the interval as desired
+                wait(0.1) -- Adjust the interval as desired
             end
         end)()
 
@@ -204,7 +215,7 @@ spawn(function()
                 end
 
                 -- Wait for a short interval before checking again
-                wait(1) -- Adjust the interval as desired
+                wait(0.1) -- Adjust the interval as desired
             end
         end)()
     end
@@ -305,7 +316,7 @@ coroutine.wrap(function()
         end
 
         -- Wait for a short interval before checking again
-        wait(1) -- Adjust the interval as desired
+        wait(0.1) -- Adjust the interval as desired
     end
 end)()
 
