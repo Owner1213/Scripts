@@ -1,3 +1,22 @@
+--[[]
+
+
+ ________  __       __                                       ______            
+/        |/  |  _  /  |                                     /      \           
+$$$$$$$$/ $$ | / \ $$ |  ______    ______    ______        /$$$$$$  |  ______  
+    /$$/  $$ |/$  \$$ | /      \  /      \  /      \       $$ |  $$/  /      \ 
+   /$$/   $$ /$$$  $$ | $$$$$$  |/$$$$$$  |/$$$$$$  |      $$ |      /$$$$$$  |
+  /$$/    $$ $$/$$ $$ | /    $$ |$$ |  $$/ $$    $$ |      $$ |   __ $$ |  $$ |
+ /$$/____ $$$$/  $$$$ |/$$$$$$$ |$$ |      $$$$$$$$/       $$ \__/  |$$ \__$$ |
+/$$      |$$$/    $$$ |$$    $$ |$$ |      $$       |      $$    $$/ $$    $$/ 
+$$$$$$$$/ $$/      $$/  $$$$$$$/ $$/        $$$$$$$/        $$$$$$/   $$$$$$/  
+                                                                               
+                                                                               
+                                                                               
+
+- Made By ZWare Community: https://www.youtube.com/channel/UCC7hObtOup7CWzUte6VyOlQ
+--]]
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("AutoShoot Skibidi Toilet Siege Defense(V3)", "DarkTheme")
