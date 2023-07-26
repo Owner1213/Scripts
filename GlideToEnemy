@@ -1,0 +1,55 @@
+-- by myself
+local TweenService = game:GetService("TweenService")
+
+local function CalculateDistance(position1, position2)
+    return (position1 - position2).Magnitude
+end
+
+local function FindNearestEnemy()
+    local enemiesFolder = workspace:FindFirstChild("Enemies")
+
+    if enemiesFolder and enemiesFolder:IsA("Folder") then
+        local playerCharacter = game.Players.LocalPlayer.Character
+        local playerPosition = playerCharacter.HumanoidRootPart.Position
+        local nearestEnemy, nearestDistance
+
+        for _, enemy in ipairs(enemiesFolder:GetChildren()) do
+            local enemyPart = enemy:FindFirstChild("Part")
+
+            if enemyPart then
+                local distance = CalculateDistance(playerPosition, enemyPart.Position)
+
+                if not nearestEnemy or distance < nearestDistance then
+                    nearestEnemy = enemyPart
+                    nearestDistance = distance
+                end
+            end
+        end
+
+        return nearestEnemy
+    end
+
+    return nil
+end
+
+local function GlideToCFrame(cframe)
+    local playerCharacter = game.Players.LocalPlayer.Character
+    if playerCharacter then
+        local humanoidRootPart = playerCharacter:WaitForChild("HumanoidRootPart")
+        local glideTime = 1
+        
+        local tweenInfo = TweenInfo.new(glideTime, Enum.EasingStyle.Quad)
+        local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = cframe})
+        tween:Play()
+        tween.Completed:Wait()
+    end
+end
+
+while true do
+    local nearestEnemyPart = FindNearestEnemy()
+    if nearestEnemyPart then
+        GlideToCFrame(nearestEnemyPart.CFrame)
+    end
+
+    wait(0.1)
+end
